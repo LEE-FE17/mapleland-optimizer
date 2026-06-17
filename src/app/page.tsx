@@ -15,6 +15,13 @@ const FEATURES = [
     href: "/guide",
     cta: "가이드 보기",
   },
+  {
+    icon: "🛡️",
+    title: "직업별 장비 세팅 가이드",
+    description: "전사·마법사·궁수·도적·해적 계열별로 레벨 구간별 추천 장비와 스탯 배분을 정리했습니다.",
+    href: "/gear",
+    cta: "세팅 보기",
+  },
 ];
 
 const JOB_CLASSES = [
@@ -49,7 +56,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {FEATURES.map((f) => (
           <div
             key={f.href}
@@ -72,7 +79,8 @@ export default function HomePage() {
         <h3 className="font-semibold text-blue-800 mb-2">📊 데이터 현황</h3>
         <p className="text-blue-700 text-sm leading-relaxed">
           포션, 귀환 주문서, 화살, 표창 등 주요 소비 아이템 데이터가 포함되어 있습니다.
-          헤네시스·엘리니아·페리온·커닝시티·슬리피우드 등 10개 마을의 NPC 상점 정보를 비교할 수 있습니다.
+          헤네시스·엘리니아·루디브리엄·버섯신사·뉴리프시티 등 12개 마을의 NPC 가격을 비교할 수 있습니다.
+          포션 가격은 2025년 11월 실측 기준입니다.
         </p>
       </section>
     </div>

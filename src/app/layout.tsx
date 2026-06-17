@@ -32,6 +32,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 레벨 가이드
               </Link>
+              <Link
+                href="/gear"
+                className="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 transition-colors"
+              >
+                세팅 가이드
+              </Link>
             </nav>
           </div>
         </header>

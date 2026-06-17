@@ -98,6 +98,41 @@ export type Region =
   | "쇼와마을"
   | "뉴리프시티";
 
+export type EquipSlot =
+  | "무기" | "방패" | "모자" | "상의" | "하의" | "한벌옷"
+  | "신발" | "장갑" | "망토" | "귀걸이" | "반지" | "펜던트";
+
+export type ObtainMethod = "NPC" | "드랍" | "퀘스트" | "거래소";
+
+export interface GearEntry {
+  name: string;
+  level: number;
+  slot: EquipSlot;
+  obtain: ObtainMethod;
+  obtainHint?: string;
+  keyStats?: string;
+  note?: string;
+}
+
+export interface ClassGearGuide {
+  jobClass: JobClass;
+  className: string;
+  statBuild: string;
+  statBuildNote: string;
+  jobAdvance: Array<{
+    tier: number;
+    level: number;
+    requirements: string;
+    branches: string;
+  }>;
+  levelGuides: Array<{
+    range: [number, number];
+    label: string;
+    gear: GearEntry[];
+    tips: string[];
+  }>;
+}
+
 export interface PriceComparison {
   item: Item;
   prices: {
