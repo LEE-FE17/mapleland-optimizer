@@ -92,7 +92,11 @@ export type Region =
   | "아쿠아리아"
   | "마가티아"
   | "무릉도원"
-  | "닌자성";
+  | "닌자성"
+  | "지구방위본부"
+  | "버섯신사"
+  | "쇼와마을"
+  | "뉴리프시티";
 
 export interface PriceComparison {
   item: Item;

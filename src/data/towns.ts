@@ -1,5 +1,7 @@
 import { Town } from "@/lib/types";
 
+// 가격 출처: 블로그(B플러스) 2025년 11월 23일 모든 월드 직접 실측
+
 export const TOWNS: Town[] = [
   // ── 헤네시스 ────────────────────────────────────────────────────────────
   {
@@ -15,7 +17,6 @@ export const TOWNS: Town[] = [
           { itemId: "2000000", itemName: "빨간 포션", price: 25 },
           { itemId: "2000001", itemName: "주황 포션", price: 80 },
           { itemId: "2000003", itemName: "파란 포션", price: 100 },
-          { itemId: "2000006", itemName: "마나 엘릭서", price: 310 },
           { itemId: "2000002", itemName: "하얀 포션", price: 160 },
         ],
       },
@@ -30,7 +31,7 @@ export const TOWNS: Town[] = [
       },
       {
         npcId: "henesys_arrow",
-        npcName: "무기 상인 레드",
+        npcName: "무기 상인",
         townId: "henesys",
         items: [
           { itemId: "2060001", itemName: "활전용 청동화살", price: 5 },
@@ -44,6 +45,7 @@ export const TOWNS: Town[] = [
   },
 
   // ── 엘리니아 ────────────────────────────────────────────────────────────
+  // 마나 엘릭서는 엘리니아 단독 판매 (604 메소)
   {
     id: "ellinia",
     name: "엘리니아",
@@ -57,8 +59,8 @@ export const TOWNS: Town[] = [
           { itemId: "2000000", itemName: "빨간 포션", price: 25 },
           { itemId: "2000001", itemName: "주황 포션", price: 80 },
           { itemId: "2000003", itemName: "파란 포션", price: 100 },
-          { itemId: "2000006", itemName: "마나 엘릭서", price: 310 },
           { itemId: "2000002", itemName: "하얀 포션", price: 160 },
+          { itemId: "2000006", itemName: "마나 엘릭서", price: 604 },
         ],
       },
       {
@@ -185,9 +187,6 @@ export const TOWNS: Town[] = [
           { itemId: "2000001", itemName: "주황 포션", price: 80 },
           { itemId: "2000002", itemName: "하얀 포션", price: 160 },
           { itemId: "2000003", itemName: "파란 포션", price: 100 },
-          { itemId: "2000006", itemName: "마나 엘릭서", price: 310 },
-          { itemId: "2000004", itemName: "엘릭서", price: 1000 },
-          { itemId: "2000005", itemName: "파워 엘릭서", price: 2500 },
         ],
       },
       {
@@ -202,68 +201,8 @@ export const TOWNS: Town[] = [
     ],
   },
 
-  // ── 오르비스 ────────────────────────────────────────────────────────────
-  {
-    id: "orbis",
-    name: "오르비스",
-    region: "오르비스",
-    minLevel: 50,
-    shops: [
-      {
-        npcId: "orbis_potion",
-        npcName: "오르비스 약사",
-        townId: "orbis",
-        items: [
-          { itemId: "2000001", itemName: "주황 포션", price: 80 },
-          { itemId: "2000002", itemName: "하얀 포션", price: 160 },
-          { itemId: "2000003", itemName: "파란 포션", price: 100 },
-          { itemId: "2000006", itemName: "마나 엘릭서", price: 310 },
-          { itemId: "2000004", itemName: "엘릭서", price: 1000 },
-          { itemId: "2000005", itemName: "파워 엘릭서", price: 2500 },
-        ],
-      },
-      {
-        npcId: "orbis_scroll",
-        npcName: "오르비스 잡화상",
-        townId: "orbis",
-        items: [
-          { itemId: "2030000", itemName: "마을 귀환 주문서", price: 200 },
-        ],
-      },
-    ],
-  },
-
-  // ── 엘나스 ──────────────────────────────────────────────────────────────
-  {
-    id: "elnath",
-    name: "엘나스",
-    region: "엘나스",
-    minLevel: 60,
-    shops: [
-      {
-        npcId: "elnath_potion",
-        npcName: "엘나스 약사",
-        townId: "elnath",
-        items: [
-          { itemId: "2000002", itemName: "하얀 포션", price: 160 },
-          { itemId: "2000003", itemName: "파란 포션", price: 100 },
-          { itemId: "2000006", itemName: "마나 엘릭서", price: 310 },
-          { itemId: "2000004", itemName: "엘릭서", price: 1000 },
-          { itemId: "2000005", itemName: "파워 엘릭서", price: 2500 },
-        ],
-      },
-      {
-        npcId: "elnath_scroll",
-        npcName: "엘나스 잡화상",
-        townId: "elnath",
-        items: [
-          { itemId: "2030000", itemName: "마을 귀환 주문서", price: 200 },
-        ],
-      },
-    ],
-  },
-
   // ── 루디브리엄 ──────────────────────────────────────────────────────────
+  // 쭈쭈바(HP 2000, 2185메소), 팥빙수(MP 2000, 3800메소) 판매
   {
     id: "ludibrium",
     name: "루디브리엄",
@@ -275,15 +214,23 @@ export const TOWNS: Town[] = [
         npcName: "루디 약사",
         townId: "ludibrium",
         items: [
+          { itemId: "2000001", itemName: "주황 포션", price: 80 },
           { itemId: "2000002", itemName: "하얀 포션", price: 160 },
-          { itemId: "2000006", itemName: "마나 엘릭서", price: 310 },
-          { itemId: "2000004", itemName: "엘릭서", price: 1000 },
-          { itemId: "2000005", itemName: "파워 엘릭서", price: 2500 },
+          { itemId: "2000003", itemName: "파란 포션", price: 100 },
+        ],
+      },
+      {
+        npcId: "ludi_food",
+        npcName: "잡화 상인 미스키",
+        townId: "ludibrium",
+        items: [
+          { itemId: "ml_jjujjuba", itemName: "쭈쭈바", price: 2185 },
+          { itemId: "ml_patbingsu", itemName: "팥빙수", price: 3800 },
         ],
       },
       {
         npcId: "ludi_scroll",
-        npcName: "루디 잡화상",
+        npcName: "잡화 상인",
         townId: "ludibrium",
         items: [
           { itemId: "2030000", itemName: "마을 귀환 주문서", price: 200 },
@@ -293,6 +240,7 @@ export const TOWNS: Town[] = [
   },
 
   // ── 아쿠아리아 ──────────────────────────────────────────────────────────
+  // 순록의 우유(HP 5000, 5600메소) 판매
   {
     id: "aqua",
     name: "아쿠아리아",
@@ -305,30 +253,98 @@ export const TOWNS: Town[] = [
         townId: "aqua",
         items: [
           { itemId: "2000002", itemName: "하얀 포션", price: 160 },
-          { itemId: "2000006", itemName: "마나 엘릭서", price: 310 },
-          { itemId: "2000004", itemName: "엘릭서", price: 1000 },
-          { itemId: "2000005", itemName: "파워 엘릭서", price: 2500 },
+          { itemId: "2000003", itemName: "파란 포션", price: 100 },
+          { itemId: "ml_milk", itemName: "순록의 우유", price: 5600 },
         ],
       },
     ],
   },
 
-  // ── 마가티아 ────────────────────────────────────────────────────────────
+  // ── 버섯신사 (세계여행 - 일본) ──────────────────────────────────────────
+  // 키노코(돼지사골) HP 800/850메소, 라면 HP 1000/1100메소,
+  // 키노코(구운돼지) HP 1500/1600메소, 어묵(꼬치) MP 250/550메소,
+  // 어묵(접시) MP 500/1300메소
   {
-    id: "magatia",
-    name: "마가티아",
-    region: "마가티아",
-    minLevel: 90,
+    id: "mushroom_shrine",
+    name: "버섯신사",
+    region: "버섯신사",
     shops: [
       {
-        npcId: "magatia_potion",
-        npcName: "마가티아 약사",
-        townId: "magatia",
+        npcId: "shrine_food",
+        npcName: "버섯신사 잡화상",
+        townId: "mushroom_shrine",
         items: [
-          { itemId: "2000002", itemName: "하얀 포션", price: 160 },
-          { itemId: "2000006", itemName: "마나 엘릭서", price: 310 },
-          { itemId: "2000004", itemName: "엘릭서", price: 1000 },
-          { itemId: "2000005", itemName: "파워 엘릭서", price: 2500 },
+          { itemId: "ml_kinoko1", itemName: "키노코(돼지사골)", price: 850 },
+          { itemId: "ml_ramen", itemName: "라면", price: 1100 },
+          { itemId: "ml_kinoko2", itemName: "키노코(구운돼지)", price: 1600 },
+          { itemId: "ml_eomuk1", itemName: "어묵(꼬치)", price: 550 },
+          { itemId: "ml_eomuk2", itemName: "어묵(접시)", price: 1300 },
+        ],
+      },
+    ],
+  },
+
+  // ── 지구방위본부 (세계여행) ─────────────────────────────────────────────
+  // 장어구이 HP 800/1045메소, 맑은물 MP 800/1567메소,
+  // 새벽의 이슬 MP 4000/7695메소, 황혼의 이슬 MP 5000/9690메소
+  {
+    id: "omega_sector",
+    name: "지구방위본부",
+    region: "지구방위본부",
+    shops: [
+      {
+        npcId: "omega_food",
+        npcName: "지구방위본부 잡화상",
+        townId: "omega_sector",
+        items: [
+          { itemId: "ml_jangeo", itemName: "장어구이", price: 1045 },
+          { itemId: "ml_water", itemName: "맑은물", price: 1567 },
+          { itemId: "ml_dawn", itemName: "새벽의 이슬", price: 7695 },
+          { itemId: "ml_dusk", itemName: "황혼의 이슬", price: 9690 },
+        ],
+      },
+    ],
+  },
+
+  // ── 쇼와마을 (세계여행 - 일본) ──────────────────────────────────────────
+  // 살살 녹는 치즈 HP 4000/4500메소
+  {
+    id: "showa",
+    name: "쇼와마을",
+    region: "쇼와마을",
+    shops: [
+      {
+        npcId: "showa_food",
+        npcName: "쇼와마을 잡화상",
+        townId: "showa",
+        items: [
+          { itemId: "ml_cheese", itemName: "살살 녹는 치즈", price: 4500 },
+        ],
+      },
+    ],
+  },
+
+  // ── 뉴리프시티 (리프레시티) ──────────────────────────────────────────────
+  // 광전사의 엘릭서 HP 1500/1600메소, 대마법사의 엘릭서 MP 1500/3700메소,
+  // 진저 에일 HP+MP 7500/18750메소, 인삼 원액 HP+MP 4000/10000메소,
+  // 혼스터 HP 6000/6700메소, 마나불 MP 6000/12200메소
+  {
+    id: "new_leaf_city",
+    name: "뉴리프시티",
+    region: "뉴리프시티",
+    minLevel: 100,
+    shops: [
+      {
+        npcId: "nlc_elixir",
+        npcName: "뉴리프시티 잡화상",
+        townId: "new_leaf_city",
+        items: [
+          { itemId: "ml_warrior_elixir", itemName: "광전사의 엘릭서", price: 1600 },
+          { itemId: "ml_mage_elixir", itemName: "대마법사의 엘릭서", price: 3700 },
+          { itemId: "ml_ginger_ale", itemName: "진저 에일", price: 18750 },
+          { itemId: "ml_insam", itemName: "인삼 원액", price: 10000 },
+          { itemId: "ml_honster", itemName: "혼스터", price: 6700 },
+          { itemId: "ml_manabul", itemName: "마나불", price: 12200 },
         ],
       },
     ],
